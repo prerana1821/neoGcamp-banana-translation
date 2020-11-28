@@ -7,8 +7,9 @@ let textInput = document.querySelector('textarea');
 let outputText = document.querySelector('#output-text');
 
 // let serverUrl = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json";
-let serverUrl = "https://lessonfourapi.prerananawar.repl.co/translate/yoda.json";
-// https://repl.it/@PreranaNawar/lessonfourapi#index.js
+// let serverUrl = "https://lessonfourapi.prerananawar.repl.co/translate/yoda.json";
+let serverUrl = "https://api.funtranslations.com/translate/minion.json";
+
 
 // console.log(text);
 
@@ -17,17 +18,14 @@ function urlText(text) {
     return serverUrl + "?text=" + text;
 }
 
-// function urlFetch(text) {
-//     fetch(urlText(text)).then(response => response.json()).then(json => console.log(json));
-// }
-
 inputButton.addEventListener("click", function userClick() {
     // console.log("click");
     // console.log(textInput.value);
     // outputText.innerText = 'Hello ' + textInput.value;
     fetch(urlText(textInput.value)).then(response => response.json()).then(function getJsonLog(json) {
         console.log(json);
-        outputText.innerText = json.contents.text;
+        // outputText.innerText = json.contents.text;
+        outputText.innerText = json.contents.translated;
     }).catch(function errorHandling(error) {
         console.log("Sorry an Error Occured", error);
         alert("Something went wrong with our server! Try again after some time")

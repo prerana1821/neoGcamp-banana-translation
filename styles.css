@@ -51,3 +51,15 @@ textarea {
     border-radius: 1rem;
     background-color: #f8f8f8;
 }
+
+footer {
+    background-color: #00ffff;
+    color: #000000;
+    padding: 2rem 0rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 2rem;
+    box-shadow: 0px 10px 5px rgb(175, 173, 173), 0px -10px 5px #ccc;
+}
