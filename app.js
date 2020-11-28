@@ -22,6 +22,7 @@ inputButton.addEventListener("click", function userClick() {
     // console.log("click");
     // console.log(textInput.value);
     // outputText.innerText = 'Hello ' + textInput.value;
+
     if (textInput.value === '') {
         alert('Please Enter some Text!');
     } else if (!isNaN(parseFloat(textInput.value))) {
@@ -30,8 +31,8 @@ inputButton.addEventListener("click", function userClick() {
         alert('Please Enter only Text!');
     } else {
         fetch(urlText(textInput.value)).then(response => response.json()).then(function getJsonLog(json) {
+            console.log(urlText(textInput.value));
             console.log(json);
-            // outputText.innerText = json.contents.text;
             outputText.innerText = json.contents.translated;
         }).catch(function errorHandling(error) {
             if (error.code === 429) {
@@ -40,10 +41,8 @@ inputButton.addEventListener("click", function userClick() {
                 console.log("Sorry an Error Occured", error);
                 alert("Something went wrong with our server! Try again after some time");
             }
-
         });
     }
-
 });
 
 //live exercise:to fetch data from mock - API
