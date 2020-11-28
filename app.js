@@ -11,3 +11,9 @@ inputButton.addEventListener("click", function userClick() {
     console.log("click");
     console.log(textInput.value);
 });
+
+//live exercise: querySelector
+// 1. document.querySelector('textarea');
+// 2. document.querySelector('.btn-primary');
+// 3. document.querySelector('#input-btn');
+// 4. document.querySelector('input[name="translator"]');
