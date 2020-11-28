@@ -24,6 +24,9 @@ body {
 }
 
 .btn {
+    border-radius: 49px;
+    background: #00ffff;
+    box-shadow: 28px 28px 56px #00e0e0, -28px -28px 56px #00ffff;
     margin: auto;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -31,6 +34,7 @@ body {
     display: inline-block;
     padding: 1rem 2rem;
     border-radius: 1rem;
+    box-shadow: 5px 10px 8px rgb(231, 220, 220);
     border: none;
     font-size: 1rem;
 }
@@ -49,7 +53,13 @@ textarea {
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 1rem;
+    font-size: 1.4rem;
     background-color: #f8f8f8;
+}
+
+::placeholder {
+    color: #000000;
+    font-size: 1.4rem;
 }
 
 footer {
