@@ -6,7 +6,9 @@ let inputButton = document.querySelector('#btn-translate');
 let textInput = document.querySelector('textarea');
 let outputText = document.querySelector('#output-text');
 
-let serverUrl = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json";
+// let serverUrl = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json";
+let serverUrl = "https://lessonfourapi.prerananawar.repl.co/translate/yoda.json";
+// https://repl.it/@PreranaNawar/lessonfourapi#index.js
 
 // console.log(text);
 
@@ -26,7 +28,10 @@ inputButton.addEventListener("click", function userClick() {
     fetch(urlText(textInput.value)).then(response => response.json()).then(function getJsonLog(json) {
         console.log(json);
         outputText.innerText = json.contents.text;
-    });;
+    }).catch(function errorHandling(error) {
+        console.log("Sorry an Error Occured", error);
+        alert("Something went wrong with our server! Try again after some time")
+    });
 });
 
 //live exercise:to fetch data from mock - API
