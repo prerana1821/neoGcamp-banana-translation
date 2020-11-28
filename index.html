@@ -4,25 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Banana Speak</title>
 </head>
 
 <body>
 
-    <h1>Speak Banana</h1>
+    <h1 id="heading">Speak Banana</h1>
 
-    <textarea id="text-input" cols="30" rows="10" placeholder="Enter the text you want to translate to Banana Language"></textarea>
+    <section>
+        <textarea id="text-input" cols="30" rows="10" placeholder="Enter the text you want to translate to Banana Language"></textarea>
 
-    <br>
-    <br>
-    <br>
-    <button id="btn-translate">Click</button>
+        <button id="btn-translate" class="btn">Click</button>
 
-    <br>
-    <br>
-    <br>
+        <textarea id="output-text" cols="30" rows="10"></textarea>
+    </section>
 
-    <textarea id="output-text" cols="30" rows="10"></textarea>
+    <footer>
+
+    </footer>
+
 
     <script src="app.js"></script>
 </body>
